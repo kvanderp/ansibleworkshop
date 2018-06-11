@@ -1,6 +1,6 @@
 <?php
 
-define('DB_HOST', '192.168.71.130');
+define('DB_HOST', '192.168.71.144');
 define('DB_NAME', 'f5');
 define('DB_USER','kvanderp');
 define('DB_PASSWORD','password');
