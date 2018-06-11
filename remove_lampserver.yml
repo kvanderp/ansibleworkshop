@@ -1,0 +1,21 @@
+---
+- name: Remove apache & php & mysql
+  hosts: LampServer
+  become: true
+  become_method: sudo
+  gather_facts: true
+  tasks:
+    - name: Remove Apache2
+      apt: name=apache2 update_cache=yes state=absent
+    - name: Remove apache2-php5
+      apt: name=libapache2-mod-php state=latest
+    - name: Remove php-cli
+      apt: name=php-cli state=latest
+    - name: Remove php-mcrypt
+      apt: name=php-mcrypt state=latest
+    - name: Remove php-gd
+      apt: name=php-gd state=latest
+    - name: Remove php-mysql
+      apt: name=php-mysql state=latest
+    - name: Remove mysqlserver
+      apt: name=mysql-server state=latest

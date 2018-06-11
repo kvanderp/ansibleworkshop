@@ -1,0 +1,13 @@
+---
+- name: copy
+  hosts: LampServer
+  become: true
+  become_user: root
+  gather_facts: true
+  tasks:
+  - name: copy index.HTML
+    copy: src=/Users/vanderpoorten/Documents/GitHub/Ansible_Meetups/index.html dest=/var/www/html/index.html
+  - name: copy style.css
+    copy: src=/Users/vanderpoorten/Documents/GitHub/Ansible_Meetups/style.css dest=/var/www/html/style.css
+  - name: copy connectivity-sign-up.php
+    copy: src=/Users/vanderpoorten/Documents/GitHub/Ansible_Meetups/connectivity-sign-up.php dest=/var/www/html/connectivity-sign-up.php

@@ -1,0 +1,21 @@
+---
+- name: install apache & php & mysql
+  hosts: LampServer
+  become: true
+  become_method: sudo
+  gather_facts: true
+  tasks:
+    - name: Install Apache2
+      apt: name=apache2 update_cache=yes state=latest
+    - name: Install apache2-php5
+      apt: name=libapache2-mod-php state=latest
+    - name: Install php-cli
+      apt: name=php-cli state=latest
+    - name: Install php-mcrypt
+      apt: name=php-mcrypt state=latest
+    - name: Install php-gd
+      apt: name=php-gd state=latest
+    - name: Install php-mysql
+      apt: name=php-mysql state=latest
+    - name: Install mysqlserver
+      apt: name=mysql-server state=latest
