@@ -20,4 +20,4 @@
       mysql_db: db=f5 state=present
 
     - name: Create a table reg
-      command: mysql -u kvanderp -p password -e 'CREATE TABLE reg (name varchar(30),email varchar(30),user varchar(30),pass varchar(30));' f5
+      command: mysql -ukvanderp -ppassword -e 'CREATE TABLE reg (name varchar(30),email varchar(30),user varchar(30),pass varchar(30));' f5
